@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Acalanto</title>
+    <title>@ViewData["Title"] - Refugiados</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />    
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -11,7 +11,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Acalanto</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/assets/logo.png" widith="186px" height="60px"/></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -26,6 +26,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Voluntariadoes" asp-action="Create">Seja Voluntário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Odonto" asp-action="odonto">Saúde</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Contatoes" asp-action="Create">Fale Conosco</a>
@@ -44,13 +47,18 @@
         </main>
     </div>
 
+    @*Botão whatsApp*@
+
+    <a style="background-image: url(https://i.ibb.co/RvTJC4r/whatsapp.png); border-radius: 34px;width: 60px; font-size: 0; height: 60px;position: fixed;right: 10px;z-index: 999;display: block;bottom: 10px;background-size: 73%;background-repeat: no-repeat;background-color: #1bd741;background-position: center;" target="_blank" href="https://wa.me/5511992497925?text=Como podemos te Ajuda?">link whatsapp</a>
+   
     <footer class="border-top footer text-muted">
+
         <div class="container justify-content-center">
-            &copy; 2022 - Refugiados
+            &copy; 2022 - Acalanto
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>  
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
